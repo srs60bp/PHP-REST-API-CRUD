@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <h1>Contact Management</h1>
+<h1>Contact Management</h1>
 <div id='vueapp'>
 
 <table border='1' width='100%' style='border-collapse: collapse;'>
