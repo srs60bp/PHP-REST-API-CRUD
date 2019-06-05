@@ -10,5 +10,80 @@
 
 </head>
 <body>
+    
+    <h1>Contact Management</h1>
+<div id='vueapp'>
+
+<table border='1' width='100%' style='border-collapse: collapse;'>
+   <tr>
+     <th>Name</th>
+     <th>Email</th>
+     <th>Country</th>
+     <th>City</th>
+     <th>Job</th>
+
+   </tr>
+
+   <tr v-for='contact in contacts'>
+     <td>{{ contact.name }}</td>
+     <td>{{ contact.email }}</td>
+     <td>{{ contact.country }}</td>
+     <td>{{ contact.city }}</td>
+     <td>{{ contact.job }}</td>
+   </tr>
+ </table>
+
+    
+</br>
+
+    <form>
+      <label>Name</label>
+      <input type="text" name="name" v-model="name">
+</br>
+      <label>Email</label>
+      <input type="email" name="email" v-model="email">
+      </br>
+      <label>Country</label>
+      <input type="text" name="country" v-model="country">
+      </br>
+      <label>City</label>
+      <input type="text" name="city" v-model="city">
+      </br>
+      <label>Job</label>
+      <input type="text" name="job" v-model="job">
+      </br>
+      <input type="button" @click="createContact()" value="Add">
+    </form>
+
+</div>
+
+<script>
+var app = new Vue({
+  el: '#vueapp',
+  data: {
+      name: '',
+      email: '',
+      country: '',
+      city: '',
+      job: '',
+      contacts: []
+  },
+  mounted: function () {
+    console.log('Hello from Vue!')
+    this.getContacts()
+  },
+
+  methods: {
+    getContacts: function(){
+    },
+    createContact: function(){
+    },
+    resetForm: function(){
+    }
+  }
+})    
+</script>
+
 </body>
-</html>
+</html>    
+
