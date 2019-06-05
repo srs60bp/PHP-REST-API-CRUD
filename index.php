@@ -7,11 +7,11 @@
     <title>PHP| MySQL | Vue.js | Axios Example</title>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
 </head>
 <body>
     
 <h1>Contact Management</h1>
+    
 <div id='vueapp'>
 
 <table border='1' width='100%' style='border-collapse: collapse;'>
@@ -21,7 +21,6 @@
      <th>Country</th>
      <th>City</th>
      <th>Job</th>
-
    </tr>
 
    <tr v-for='contact in contacts'>
@@ -32,14 +31,12 @@
      <td>{{ contact.job }}</td>
    </tr>
  </table>
-
     
-</br>
-
+    </br>
     <form>
       <label>Name</label>
       <input type="text" name="name" v-model="name">
-</br>
+      </br>
       <label>Email</label>
       <input type="email" name="email" v-model="email">
       </br>
@@ -61,11 +58,11 @@
 var app = new Vue({
   el: '#vueapp',
   data: {
-      name: '',
-      email: '',
-      country: '',
-      city: '',
-      job: '',
+      name:     '',
+      email:    '',
+      country:  '',
+      city:     '',
+      job:      '',
       contacts: []
   },
   mounted: function () {
